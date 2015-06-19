@@ -24,89 +24,89 @@ Following is a table of the variables provided in the final output dataset "sams
  #0 is from the subject files  
  #1 is from the activity file
 
-|Original Column |New Column |Variable Name                |
-|:---------------|:----------|:----------------------------|
-|#0              |1          |subjectid                    |
-|#1              |2          |activity                     |
-|1               |3          |tbodyaccmeanx                |
-|2               |4          |tbodyaccmeany                |
-|3               |5          |tbodyaccmeanz                |
-|4               |6          |tbodyaccstdx                 |
-|5               |7          |tbodyaccstdy                 |
-|6               |8          |tbodyaccstdz                 |
-|41              |9          |tgravityaccmeanx             |
-|42              |10         |tgravityaccmeany             |
-|43              |11         |tgravityaccmeanz             |
-|44              |12         |tgravityaccstdx              |
-|45              |13         |tgravityaccstdy              |
-|46              |14         |tgravityaccstdz              |
-|81              |15         |tbodyaccjerkmeanx            |
-|82              |16         |tbodyaccjerkmeany            |
-|83              |17         |tbodyaccjerkmeanz            |
-|84              |18         |tbodyaccjerkstdx             |
-|85              |19         |tbodyaccjerkstdy             |
-|86              |20         |tbodyaccjerkstdz             |
-|121             |21         |tbodygyromeanx               |
-|122             |22         |tbodygyromeany               |
-|123             |23         |tbodygyromeanz               |
-|124             |24         |tbodygyrostdx                |
-|125             |25         |tbodygyrostdy                |
-|126             |26         |tbodygyrostdz                |
-|161             |27         |tbodygyrojerkmeanx           |
-|162             |28         |tbodygyrojerkmeany           |
-|163             |29         |tbodygyrojerkmeanz           |
-|164             |30         |tbodygyrojerkstdx            |
-|165             |31         |tbodygyrojerkstdy            |
-|166             |32         |tbodygyrojerkstdz            |
-|201             |33         |tbodyaccmagmean              |
-|202             |34         |tbodyaccmagstd               |
-|214             |35         |tgravityaccmagmean           |
-|215             |36         |tgravityaccmagstd            |
-|227             |37         |tbodyaccjerkmagmean          |
-|228             |38         |tbodyaccjerkmagstd           |
-|240             |39         |tbodygyromagmean             |
-|241             |40         |tbodygyromagstd              |
-|253             |41         |tbodygyrojerkmagmean         |
-|254             |42         |tbodygyrojerkmagstd          |
-|266             |43         |fbodyaccmeanx                |
-|267             |44         |fbodyaccmeany                |
-|268             |45         |fbodyaccmeanz                |
-|269             |46         |fbodyaccstdx                 |
-|270             |47         |fbodyaccstdy                 |
-|271             |48         |fbodyaccstdz                 |
-|294             |49         |fbodyaccmeanfreqx            |
-|295             |50         |fbodyaccmeanfreqy            |
-|296             |51         |fbodyaccmeanfreqz            |
-|345             |52         |fbodyaccjerkmeanx            |
-|346             |53         |fbodyaccjerkmeany            |
-|347             |54         |fbodyaccjerkmeanz            |
-|348             |55         |fbodyaccjerkstdx             |
-|349             |56         |fbodyaccjerkstdy             |
-|350             |57         |fbodyaccjerkstdz             |
-|373             |58         |fbodyaccjerkmeanfreqx        |
-|374             |59         |fbodyaccjerkmeanfreqy        |
-|375             |60         |fbodyaccjerkmeanfreqz        |
-|424             |61         |fbodygyromeanx               |
-|425             |62         |fbodygyromeany               |
-|426             |63         |fbodygyromeanz               |
-|427             |64         |fbodygyrostdx                |
-|428             |65         |fbodygyrostdy                |
-|429             |66         |fbodygyrostdz                |
-|452             |67         |fbodygyromeanfreqx           |
-|453             |68         |fbodygyromeanfreqy           |
-|454             |69         |fbodygyromeanfreqz           |
-|503             |70         |fbodyaccmagmean              |
-|504             |71         |fbodyaccmagstd               |
-|513             |72         |fbodyaccmagmeanfreq          |
-|516             |73         |fbodybodyaccjerkmagmean      |
-|517             |74         |fbodybodyaccjerkmagstd       |
-|526             |75         |fbodybodyaccjerkmagmeanfreq  |
-|529             |76         |fbodybodygyromagmean         |
-|530             |77         |fbodybodygyromagstd          |
-|539             |78         |fbodybodygyromagmeanfreq     |
-|542             |79         |fbodybodygyrojerkmagmean     |
-|543             |80         |fbodybodygyrojerkmagstd      |
-|552             |81         |fbodybodygyrojerkmagmeanfreq |
+|Original Column |New Column |Variable Name                |Type      |
+|:---------------|:----------|:----------------------------|:---------|
+|#0              |1          |subjectid                    |integer   |
+|#1              |2          |activity                     |Factor    |
+|1               |3          |tbodyaccmeanx                |numeric   |
+|2               |4          |tbodyaccmeany                |numeric   |
+|3               |5          |tbodyaccmeanz                |numeric   |
+|4               |6          |tbodyaccstdx                 |numeric   |
+|5               |7          |tbodyaccstdy                 |numeric   |
+|6               |8          |tbodyaccstdz                 |numeric   |
+|41              |9          |tgravityaccmeanx             |numeric   |
+|42              |10         |tgravityaccmeany             |numeric   |
+|43              |11         |tgravityaccmeanz             |numeric   |
+|44              |12         |tgravityaccstdx              |numeric   |
+|45              |13         |tgravityaccstdy              |numeric   |
+|46              |14         |tgravityaccstdz              |numeric   |
+|81              |15         |tbodyaccjerkmeanx            |numeric   |
+|82              |16         |tbodyaccjerkmeany            |numeric   |
+|83              |17         |tbodyaccjerkmeanz            |numeric   |
+|84              |18         |tbodyaccjerkstdx             |numeric   |
+|85              |19         |tbodyaccjerkstdy             |numeric   |
+|86              |20         |tbodyaccjerkstdz             |numeric   |
+|121             |21         |tbodygyromeanx               |numeric   |
+|122             |22         |tbodygyromeany               |numeric   |
+|123             |23         |tbodygyromeanz               |numeric   |
+|124             |24         |tbodygyrostdx                |numeric   |
+|125             |25         |tbodygyrostdy                |numeric   |
+|126             |26         |tbodygyrostdz                |numeric   |
+|161             |27         |tbodygyrojerkmeanx           |numeric   |
+|162             |28         |tbodygyrojerkmeany           |numeric   |
+|163             |29         |tbodygyrojerkmeanz           |numeric   |
+|164             |30         |tbodygyrojerkstdx            |numeric   |
+|165             |31         |tbodygyrojerkstdy            |numeric   |
+|166             |32         |tbodygyrojerkstdz            |numeric   |
+|201             |33         |tbodyaccmagmean              |numeric   |
+|202             |34         |tbodyaccmagstd               |numeric   |
+|214             |35         |tgravityaccmagmean           |numeric   |
+|215             |36         |tgravityaccmagstd            |numeric   |
+|227             |37         |tbodyaccjerkmagmean          |numeric   |
+|228             |38         |tbodyaccjerkmagstd           |numeric   |
+|240             |39         |tbodygyromagmean             |numeric   |
+|241             |40         |tbodygyromagstd              |numeric   |
+|253             |41         |tbodygyrojerkmagmean         |numeric   |
+|254             |42         |tbodygyrojerkmagstd          |numeric   |
+|266             |43         |fbodyaccmeanx                |numeric   |
+|267             |44         |fbodyaccmeany                |numeric   |
+|268             |45         |fbodyaccmeanz                |numeric   |
+|269             |46         |fbodyaccstdx                 |numeric   |
+|270             |47         |fbodyaccstdy                 |numeric   |
+|271             |48         |fbodyaccstdz                 |numeric   |
+|294             |49         |fbodyaccmeanfreqx            |numeric   |
+|295             |50         |fbodyaccmeanfreqy            |numeric   |
+|296             |51         |fbodyaccmeanfreqz            |numeric   |
+|345             |52         |fbodyaccjerkmeanx            |numeric   |
+|346             |53         |fbodyaccjerkmeany            |numeric   |
+|347             |54         |fbodyaccjerkmeanz            |numeric   |
+|348             |55         |fbodyaccjerkstdx             |numeric   |
+|349             |56         |fbodyaccjerkstdy             |numeric   |
+|350             |57         |fbodyaccjerkstdz             |numeric   |
+|373             |58         |fbodyaccjerkmeanfreqx        |numeric   |
+|374             |59         |fbodyaccjerkmeanfreqy        |numeric   |
+|375             |60         |fbodyaccjerkmeanfreqz        |numeric   |
+|424             |61         |fbodygyromeanx               |numeric   |
+|425             |62         |fbodygyromeany               |numeric   |
+|426             |63         |fbodygyromeanz               |numeric   |
+|427             |64         |fbodygyrostdx                |numeric   |
+|428             |65         |fbodygyrostdy                |numeric   |
+|429             |66         |fbodygyrostdz                |numeric   |
+|452             |67         |fbodygyromeanfreqx           |numeric   |
+|453             |68         |fbodygyromeanfreqy           |numeric   |
+|454             |69         |fbodygyromeanfreqz           |numeric   |
+|503             |70         |fbodyaccmagmean              |numeric   |
+|504             |71         |fbodyaccmagstd               |numeric   |
+|513             |72         |fbodyaccmagmeanfreq          |numeric   |
+|516             |73         |fbodybodyaccjerkmagmean      |numeric   |
+|517             |74         |fbodybodyaccjerkmagstd       |numeric   |
+|526             |75         |fbodybodyaccjerkmagmeanfreq  |numeric   |
+|529             |76         |fbodybodygyromagmean         |numeric   |
+|530             |77         |fbodybodygyromagstd          |numeric   |
+|539             |78         |fbodybodygyromagmeanfreq     |numeric   |
+|542             |79         |fbodybodygyrojerkmagmean     |numeric   |
+|543             |80         |fbodybodygyrojerkmagstd      |numeric   |
+|552             |81         |fbodybodygyrojerkmagmeanfreq |numeric   |
 
 FYI: to get the above table in markdown format, use the 'knitr' library, and the 'kable' method such that kable(object_to_display) produces markdown text that can be copied into an .md file.
 

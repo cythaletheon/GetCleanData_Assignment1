@@ -81,6 +81,7 @@ img {
 <th align="left">Original Column</th>
 <th align="left">New Column</th>
 <th align="left">Variable Name</th>
+<th align="left">Type</th>
 </tr>
 </thead>
 <tbody>
@@ -88,406 +89,487 @@ img {
 <td align="left">#0</td>
 <td align="left">1</td>
 <td align="left">subjectid</td>
+<td align="left">integer</td>
 </tr>
 <tr class="even">
 <td align="left">#1</td>
 <td align="left">2</td>
 <td align="left">activity</td>
+<td align="left">Factor</td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">3</td>
 <td align="left">tbodyaccmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">2</td>
 <td align="left">4</td>
 <td align="left">tbodyaccmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">3</td>
 <td align="left">5</td>
 <td align="left">tbodyaccmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">4</td>
 <td align="left">6</td>
 <td align="left">tbodyaccstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">5</td>
 <td align="left">7</td>
 <td align="left">tbodyaccstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">6</td>
 <td align="left">8</td>
 <td align="left">tbodyaccstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">41</td>
 <td align="left">9</td>
 <td align="left">tgravityaccmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">42</td>
 <td align="left">10</td>
 <td align="left">tgravityaccmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">43</td>
 <td align="left">11</td>
 <td align="left">tgravityaccmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">44</td>
 <td align="left">12</td>
 <td align="left">tgravityaccstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">45</td>
 <td align="left">13</td>
 <td align="left">tgravityaccstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">46</td>
 <td align="left">14</td>
 <td align="left">tgravityaccstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">81</td>
 <td align="left">15</td>
 <td align="left">tbodyaccjerkmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">82</td>
 <td align="left">16</td>
 <td align="left">tbodyaccjerkmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">83</td>
 <td align="left">17</td>
 <td align="left">tbodyaccjerkmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">84</td>
 <td align="left">18</td>
 <td align="left">tbodyaccjerkstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">85</td>
 <td align="left">19</td>
 <td align="left">tbodyaccjerkstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">86</td>
 <td align="left">20</td>
 <td align="left">tbodyaccjerkstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">121</td>
 <td align="left">21</td>
 <td align="left">tbodygyromeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">122</td>
 <td align="left">22</td>
 <td align="left">tbodygyromeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">123</td>
 <td align="left">23</td>
 <td align="left">tbodygyromeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">124</td>
 <td align="left">24</td>
 <td align="left">tbodygyrostdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">125</td>
 <td align="left">25</td>
 <td align="left">tbodygyrostdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">126</td>
 <td align="left">26</td>
 <td align="left">tbodygyrostdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">161</td>
 <td align="left">27</td>
 <td align="left">tbodygyrojerkmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">162</td>
 <td align="left">28</td>
 <td align="left">tbodygyrojerkmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">163</td>
 <td align="left">29</td>
 <td align="left">tbodygyrojerkmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">164</td>
 <td align="left">30</td>
 <td align="left">tbodygyrojerkstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">165</td>
 <td align="left">31</td>
 <td align="left">tbodygyrojerkstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">166</td>
 <td align="left">32</td>
 <td align="left">tbodygyrojerkstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">201</td>
 <td align="left">33</td>
 <td align="left">tbodyaccmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">202</td>
 <td align="left">34</td>
 <td align="left">tbodyaccmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">214</td>
 <td align="left">35</td>
 <td align="left">tgravityaccmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">215</td>
 <td align="left">36</td>
 <td align="left">tgravityaccmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">227</td>
 <td align="left">37</td>
 <td align="left">tbodyaccjerkmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">228</td>
 <td align="left">38</td>
 <td align="left">tbodyaccjerkmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">240</td>
 <td align="left">39</td>
 <td align="left">tbodygyromagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">241</td>
 <td align="left">40</td>
 <td align="left">tbodygyromagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">253</td>
 <td align="left">41</td>
 <td align="left">tbodygyrojerkmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">254</td>
 <td align="left">42</td>
 <td align="left">tbodygyrojerkmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">266</td>
 <td align="left">43</td>
 <td align="left">fbodyaccmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">267</td>
 <td align="left">44</td>
 <td align="left">fbodyaccmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">268</td>
 <td align="left">45</td>
 <td align="left">fbodyaccmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">269</td>
 <td align="left">46</td>
 <td align="left">fbodyaccstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">270</td>
 <td align="left">47</td>
 <td align="left">fbodyaccstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">271</td>
 <td align="left">48</td>
 <td align="left">fbodyaccstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">294</td>
 <td align="left">49</td>
 <td align="left">fbodyaccmeanfreqx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">295</td>
 <td align="left">50</td>
 <td align="left">fbodyaccmeanfreqy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">296</td>
 <td align="left">51</td>
 <td align="left">fbodyaccmeanfreqz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">345</td>
 <td align="left">52</td>
 <td align="left">fbodyaccjerkmeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">346</td>
 <td align="left">53</td>
 <td align="left">fbodyaccjerkmeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">347</td>
 <td align="left">54</td>
 <td align="left">fbodyaccjerkmeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">348</td>
 <td align="left">55</td>
 <td align="left">fbodyaccjerkstdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">349</td>
 <td align="left">56</td>
 <td align="left">fbodyaccjerkstdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">350</td>
 <td align="left">57</td>
 <td align="left">fbodyaccjerkstdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">373</td>
 <td align="left">58</td>
 <td align="left">fbodyaccjerkmeanfreqx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">374</td>
 <td align="left">59</td>
 <td align="left">fbodyaccjerkmeanfreqy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">375</td>
 <td align="left">60</td>
 <td align="left">fbodyaccjerkmeanfreqz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">424</td>
 <td align="left">61</td>
 <td align="left">fbodygyromeanx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">425</td>
 <td align="left">62</td>
 <td align="left">fbodygyromeany</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">426</td>
 <td align="left">63</td>
 <td align="left">fbodygyromeanz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">427</td>
 <td align="left">64</td>
 <td align="left">fbodygyrostdx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">428</td>
 <td align="left">65</td>
 <td align="left">fbodygyrostdy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">429</td>
 <td align="left">66</td>
 <td align="left">fbodygyrostdz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">452</td>
 <td align="left">67</td>
 <td align="left">fbodygyromeanfreqx</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">453</td>
 <td align="left">68</td>
 <td align="left">fbodygyromeanfreqy</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">454</td>
 <td align="left">69</td>
 <td align="left">fbodygyromeanfreqz</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">503</td>
 <td align="left">70</td>
 <td align="left">fbodyaccmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">504</td>
 <td align="left">71</td>
 <td align="left">fbodyaccmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">513</td>
 <td align="left">72</td>
 <td align="left">fbodyaccmagmeanfreq</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">516</td>
 <td align="left">73</td>
 <td align="left">fbodybodyaccjerkmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">517</td>
 <td align="left">74</td>
 <td align="left">fbodybodyaccjerkmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">526</td>
 <td align="left">75</td>
 <td align="left">fbodybodyaccjerkmagmeanfreq</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">529</td>
 <td align="left">76</td>
 <td align="left">fbodybodygyromagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">530</td>
 <td align="left">77</td>
 <td align="left">fbodybodygyromagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">539</td>
 <td align="left">78</td>
 <td align="left">fbodybodygyromagmeanfreq</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">542</td>
 <td align="left">79</td>
 <td align="left">fbodybodygyrojerkmagmean</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="even">
 <td align="left">543</td>
 <td align="left">80</td>
 <td align="left">fbodybodygyrojerkmagstd</td>
+<td align="left">numeric</td>
 </tr>
 <tr class="odd">
 <td align="left">552</td>
 <td align="left">81</td>
 <td align="left">fbodybodygyrojerkmagmeanfreq</td>
+<td align="left">numeric</td>
 </tr>
 </tbody>
 </table>
