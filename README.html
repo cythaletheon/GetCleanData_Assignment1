@@ -136,7 +136,7 @@ img {
 </blockquote>
 <p>testSubjects and trainingSubjects are lists of the Subject ID:</p>
 <blockquote>
-<p>setnames(testSubjects, “subjectID”)<br />setnames(trainingSubjects, “subjectID”)</p>
+<p>setnames(testSubjects, “subjectid”)<br />setnames(trainingSubjects, “subjectid”)</p>
 </blockquote>
 </div>
 <div id="step-3" class="section level4">
@@ -170,13 +170,17 @@ img {
 <blockquote>
 <p>rawData &lt;- rbind(rawTestData,rawTrainData)</p>
 </blockquote>
+<p>We also need to fix column names to conform to tidy data standard:</p>
+<blockquote>
+<p>setnames(rawData,tolower(gsub(“[[:punct:]]”,“”,names(rawData))))</p>
+</blockquote>
 </div>
 <div id="step-6" class="section level4">
 <h4>Step 6:</h4>
 <p>From this data we want a table of the averages of each feature (variable) grouped by each activity, for each subject.</p>
 <p>Using dplyr to select, group, summarise and sort the required data:</p>
 <blockquote>
-<p>resultData &lt;- rawData %&gt;%<br /> group_by(subjectID,activity) %&gt;%<br /> summarise_each(funs(mean)) %&gt;%<br /> arrange(subjectID, activity)</p>
+<p>resultData &lt;- rawData %&gt;%<br /> group_by(subjectid,activity) %&gt;%<br /> summarise_each(funs(mean)) %&gt;%<br /> arrange(subjectid, activity)</p>
 </blockquote>
 </div>
 <div id="step-7" class="section level4">
@@ -188,53 +192,6 @@ img {
 <p>Clean up the working environment. Remove all intemediary objects.</p>
 </div>
 </div>
-</div>
-<div id="note-on-usage-of-the-final-dataset" class="section level2">
-<h2>Note on usage of the final dataset</h2>
-<p>Due to the more descriptive characters in the column names of the source data which have been preserved in the result data to retain the value of the original documentation, to reference specific columns of data for further analysis, use back quotes around the name, for example:</p>
-<pre><code>&gt; sqldf('select subjectID, activity, `tBodyAcc-mean()-X` from resultData where subjectID=2')</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="right">subjectID</th>
-<th align="left">activity</th>
-<th align="right">tBodyAcc-mean()-X</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">STANDING</td>
-<td align="right">0.2779115</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">SITTING</td>
-<td align="right">0.2770874</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">LAYING</td>
-<td align="right">0.2813734</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">WALKING</td>
-<td align="right">0.2764266</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">WALKING_DOWNSTAIRS</td>
-<td align="right">0.2776153</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">WALKING_UPSTAIRS</td>
-<td align="right">0.2471648</td>
-</tr>
-</tbody>
-</table>
-<p>FYI: to get the above table in markdown format, use the ‘knitr’ library, and the ‘kable’ method such that kable(object_to_display) produces markdown text that can be copied into an .md file.</p>
 </div>
 
 

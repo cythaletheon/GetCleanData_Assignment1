@@ -65,8 +65,8 @@ setnames(activities, c("id","activity"))
 setnames(yTestCol, "id")
 setnames(yTrainCol, "id")
 
-setnames(testSubjects, "subjectID")
-setnames(trainingSubjects, "subjectID")
+setnames(testSubjects, "subjectid")
+setnames(trainingSubjects, "subjectid")
 
 # Step 3: extract only the mean and std columns
 # here, we can use the columnNames data.table to subset:
@@ -86,15 +86,17 @@ rawTrainData <-cbind(trainingSubjects,yTrainCol,xTrainData)
 # Step 5 - join both datasets
 rawData <- rbind(rawTestData,rawTrainData)
 
+# fix column names to conform to tidy data standard
+setnames(rawData,tolower(gsub("[[:punct:]]","",names(rawData))))
 
 # Step 6 - Extract average (arithmetic mean) of each variable for each activity and each subject
 # (ie extract average of each column grouped by activity for each subject)
 
 # use dplyr package for this action
 resultData <- rawData %>%
-  group_by(subjectID,activity) %>%
+  group_by(subjectid,activity) %>%
   summarise_each(funs(mean)) %>%
-  arrange(subjectID, activity)
+  arrange(subjectid, activity)
 
 # Step 7 - save resultData as a file
 write.table(resultData, file = "samsung_tidy_data.txt", row.names=FALSE)

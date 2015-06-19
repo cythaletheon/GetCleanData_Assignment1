@@ -92,8 +92,8 @@ yTestCol and yTrainCol are single column tables with the name 'id':
 
 testSubjects and trainingSubjects are lists of the Subject ID:
 
-> setnames(testSubjects, "subjectID")  
-> setnames(trainingSubjects, "subjectID")
+> setnames(testSubjects, "subjectid")  
+> setnames(trainingSubjects, "subjectid")
 
 
 ####Step 3:
@@ -133,6 +133,11 @@ The objective of this exercise is to produce a single dataset of all the availab
 
 > rawData <- rbind(rawTestData,rawTrainData)
 
+We also need to fix column names to conform to tidy data standard:
+
+> setnames(rawData,tolower(gsub("[[:punct:]]","",names(rawData))))  
+
+
 ####Step 6:
 From this data we want a table of the averages of each feature (variable) grouped
 by each activity, for each subject.
@@ -140,9 +145,9 @@ by each activity, for each subject.
 Using dplyr to select, group, summarise and sort the required data:
 
 > resultData <- rawData %>%  
->   group_by(subjectID,activity) %>%  
+>   group_by(subjectid,activity) %>%  
 >   summarise_each(funs(mean)) %>%  
->   arrange(subjectID, activity) 
+>   arrange(subjectid, activity) 
 
 
 ####Step 7:
@@ -154,19 +159,3 @@ Save the result data as a text file "samsung_tidy_data.txt" using write.table.
 
 Clean up the working environment.  Remove all intemediary objects.
 
-## Note on usage of the final dataset
-
-Due to the more descriptive characters in the column names of the source data which have been preserved in the result data to retain the value of the original documentation, to reference specific columns of data for further analysis, use back quotes around the name, for example:
-
-    > sqldf('select subjectID, activity, `tBodyAcc-mean()-X` from resultData where subjectID=2')
-    
-| subjectID|activity           | tBodyAcc-mean()-X|
-|---------:|:------------------|-----------------:|
-|         2|STANDING           |         0.2779115|
-|         2|SITTING            |         0.2770874|
-|         2|LAYING             |         0.2813734|
-|         2|WALKING            |         0.2764266|
-|         2|WALKING_DOWNSTAIRS |         0.2776153|
-|         2|WALKING_UPSTAIRS   |         0.2471648|
-
-FYI: to get the above table in markdown format, use the 'knitr' library, and the 'kable' method such that kable(object_to_display) produces markdown text that can be copied into an .md file.
