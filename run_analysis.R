@@ -98,6 +98,9 @@ resultData <- rawData %>%
   summarise_each(funs(mean)) %>%
   arrange(subjectid, activity)
 
+# refactor the activity column as factors:
+resultData$activity <- as.factor(resultData$activity)
+
 # Step 7 - save resultData as a file
 write.table(resultData, file = "samsung_tidy_data.txt", row.names=FALSE)
 
